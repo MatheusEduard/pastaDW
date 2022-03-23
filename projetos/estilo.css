@@ -1,0 +1,32 @@
+.cabecalho{
+    height: 60%;
+    border-bottom: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+}
+.logoFireFox{
+    width: 15%;
+    padding-right: 10%;
+}
+
+.listasMenuSup{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.menuSup {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    
+}
+.itemMenuSup{
+    padding-left: 10%;
+}
+
+.UsuaSair{
+    padding-right: 10%;
+}
