@@ -21,3 +21,42 @@
     margin-left: 18%;
     margin-top: 1%
 }
+
+.tabelaExercicio2{
+    width: 600px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tabelaCabecalho{
+    background-color: green;
+    color: white;
+    height: 80px;
+}
+
+.cor1{
+    background-color: beige;
+    color: black;
+}
+
+.cor2{
+    background-color: white;
+    color: black;
+
+}
+
+.nomeCidades{
+    color: #0D5188;
+}
+
+.posicoes{
+    width: 5%;
+}
+
+.infQuanti{
+    width: 15%;
+}
+
+td{
+    text-align: center;
+}
