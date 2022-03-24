@@ -1,5 +1,10 @@
+html,body{
+    margin: 0;
+    height: 100%;
+}
+
 .cabecalho{
-    height: 60%;
+    height: 10%;
     border-bottom: 2px solid black;
     display: flex;
     flex-direction: row;
@@ -41,21 +46,31 @@
     width: 100%;
     margin: 0 auto;
     min-height: 300px;
-
+    height: 80%;
 }
 .itensMenuLat{
     list-style: none;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    height: 420px;
+    
 }
 
 .parte1{
     border: 2px solid green;
     display: flex;
+    width: 250px;
+    
+    
 }
 
 .parte2{
     display: flex;
     border: 2px solid blue;
     flex-wrap: wrap;
+    align-content: flex-start;
+        
 }
 .conteudo{
     min-width: 300px;
@@ -63,15 +78,16 @@
     margin: 8px;
     border-radius: 10px;
     flex: 1;
+    height: 200px;
     
 }
 .itemlistaLat{
-    margin: 30px;
+
 }
 
 .rodape{
     display: flex;
     flex: 1;
     border:2px solid black;
-    min-height: 75px;
+    height: 10%;
 }
