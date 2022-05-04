@@ -1,14 +1,28 @@
 <script>
 export default {
-  props: ["lista"]
+  props: ["lista", "title"],
+  methods: {
+    concluirItem(i) {
+      this.$emit("concluirItem", i);
+    },
+    refazerItem(i) {
+      this.$emit("refazerItem", i);
+    },
+  },
 };
 </script>
 
 <template>
-  <div>
-    <article class="block" v-for="item in lista" :key="item.id">
+  <div v-if="this.title === 'To do'">
+    <article class="block" v-for="(item, i) in lista" :key="item.id">
       <p class="descricao">{{ item.descricao }}</p>
-      <button @click = "$emit('click', $event.target.item.id)">Completo</button>
+      <button @click="concluirItem(i)">Completar</button>
+    </article>
+  </div>
+  <div v-else>
+    <article class="block" v-for="(item, i) in lista" :key="item.id">
+      <p class="descricao">{{ item.descricao }}</p>
+      <button @click="refazerItem(i)">Refazer</button>
     </article>
   </div>
 </template>

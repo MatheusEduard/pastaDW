@@ -21,22 +21,38 @@ export default {
       ],
       done: [
         {
-          id: 1,
+          id: 4,
           descricao: "Fazer a segurança  do Site",
         },
         {
-          id: 2,
+          id: 5,
           descricao: "Fazer as cores do site",
         },
       ],
     };
   },
+  methods: {
+    concluirItem(pos) {
+      this.done.push({
+        id: this.todo[pos].id,
+        descricao: this.todo[pos].descricao,
+      });
+      this.todo.splice([pos], 1);
+    },
+    refazerItem(pos) {
+      this.todo.push({
+        id: this.done[pos].id,
+        descricao: this.done[pos].descricao,
+      });
+      this.done.splice([pos], 1);
+    },
+  },
 };
 </script>
 <template>
   <div class="listaKambam">
-    <BoxBoard title="Todo"  :lista = "todo"/>
-    <BoxBoard title="Done" :lista = "done"/>
+    <BoxBoard title="To do" :lista="todo" @concluirItem="concluirItem" />
+    <BoxBoard title="Done" :lista="done" @refazerItem="refazerItem"/>
   </div>
 </template>
 
