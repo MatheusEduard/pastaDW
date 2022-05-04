@@ -18,6 +18,6 @@ export default {
   <div class="box">
       <h2>{{ title }}</h2>
       <ItensLista :lista = "lista" :title = "title" @concluirItem="concluirItem" @refazerItem="refazerItem"/>
-      </div>
+  </div>
   
 </template>
