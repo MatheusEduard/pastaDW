@@ -1,45 +1,36 @@
 body {
   margin: 0;
   height: 100vh;
+  background-color: #404E4D;
 }
 
 #app {
   height: 100%;
   display: grid;
   grid-template-columns: 15% 35% 35% 15%;
-  grid-template-rows: 10% auto 10%;
-  grid-template-areas: 
+  grid-template-rows: 20% auto 10%;
+  grid-template-areas:
     "nada1 nada2 nada3 nada4"
     "nada5 lista1 lista1 nada6"
     "nada7 nada8 nada9 nada10";
 }
 
-#header, #content, #sidenav, #footer {
+#header,
+#content,
+#sidenav,
+#footer {
   border: 1px solid green;
 }
 
-#header {
-  /* grid-area: header; */
-}
-#content {
-  /* grid-area: content; */
-  display: flex;
-  flex-wrap: wrap;
-}
-#footer {
-  /* grid-area: footer; */
-}
-#sidenav {
-  /* grid-area: sidenav; */
-}
-
 .block {
-  border: 4px solid black;
+  /* border: 4px solid #404E4D; */
   border-radius: 30px;
   padding: 20px;
   margin: 10px;
   display: flex;
   flex: 1;
+  background-color: #606580;
+  justify-content: space-between;
 }
 
 .corFundo {
@@ -54,7 +45,24 @@ body {
 .box {
   height: calc(100%-20px);
   margin: 10px;
-  border: 2px solid black;
+  /* border: 2px solid #404E4D; */
   background-color: azure;
-  flex:1;
+  flex: 1;
+  border-radius: 30px;
+  background-color: #63595C;
+  
+}
+
+.botao{
+  border-radius: 20px;
+  border: 2px solid #404E4D;
+  background-color: #404E4D;
+}
+
+.adicionarTodo{
+  grid-area: nada2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }

@@ -16,13 +16,13 @@ export default {
   <div v-if="this.title === 'To do'">
     <article class="block" v-for="(item, i) in lista" :key="item.id">
       <p class="descricao">{{ item.descricao }}</p>
-      <button @click="concluirItem(i)">Completar</button>
+      <button class="botao" @click="concluirItem(i)">Completar</button>
     </article>
   </div>
   <div v-else>
     <article class="block" v-for="(item, i) in lista" :key="item.id">
       <p class="descricao">{{ item.descricao }}</p>
-      <button @click="refazerItem(i)">Refazer</button>
+      <button class="botao" @click="refazerItem(i)">Refazer</button>
     </article>
   </div>
 </template>

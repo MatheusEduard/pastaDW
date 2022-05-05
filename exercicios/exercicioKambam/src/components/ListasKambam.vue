@@ -1,6 +1,7 @@
 <script>
 import BoxBoard from "./BoxBoard.vue";
 export default {
+  props: ["novoTodo"],
   components: { BoxBoard },
 
   data() {
@@ -46,13 +47,22 @@ export default {
       });
       this.done.splice([pos], 1);
     },
+    novoTodo(novoTodo) {
+      //if(novoTodo === "")
+        //return
+        
+      this.todo.push({ id: Math.random, descricao: novoTodo });
+    },
+    limparItem() {
+      this.$emit("limparItem");
+    },
   },
 };
 </script>
 <template>
   <div class="listaKambam">
     <BoxBoard title="To do" :lista="todo" @concluirItem="concluirItem" />
-    <BoxBoard title="Done" :lista="done" @refazerItem="refazerItem"/>
+    <BoxBoard title="Done" :lista="done" @refazerItem="refazerItem" />
   </div>
 </template>
 
