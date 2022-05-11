@@ -6,20 +6,17 @@ export default {
   components: { ListasKambam, AdicionarTodo },
   data(){
     return {
-      novoItem: ""
+      
     }
   },
   methods: {
-    novoTodo(valor) {
-      this.novoItem = valor;
-    },
+    
   },
 };
 </script>
 
 <template>
-  <AdicionarTodo @novoTodo="novoTodo" />
-  <ListasKambam @limparItem="limparItem" :novoTodo="novoItem"/>
+  <ListasKambam/>
 </template>
 
 <style>

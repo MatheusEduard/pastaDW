@@ -1,8 +1,8 @@
 <script>
 import BoxBoard from "./BoxBoard.vue";
+import AdicionarTodo from "./AdicionarTodo.vue";
 export default {
-  props: ["novoTodo"],
-  components: { BoxBoard },
+  components: { BoxBoard, AdicionarTodo },
 
   data() {
     return {
@@ -30,6 +30,7 @@ export default {
           descricao: "Fazer as cores do site",
         },
       ],
+
     };
   },
   methods: {
@@ -48,8 +49,8 @@ export default {
       this.done.splice([pos], 1);
     },
     novoTodo(novoTodo) {
-      //if(novoTodo === "")
-        //return
+      if(novoTodo === "")
+        return
         
       this.todo.push({ id: Math.random, descricao: novoTodo });
     },
@@ -60,6 +61,7 @@ export default {
 };
 </script>
 <template>
+  <AdicionarTodo @novoTodo="novoTodo"/>
   <div class="listaKambam">
     <BoxBoard title="To do" :lista="todo" @concluirItem="concluirItem" />
     <BoxBoard title="Done" :lista="done" @refazerItem="refazerItem" />
